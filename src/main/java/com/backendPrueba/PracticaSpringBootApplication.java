@@ -15,16 +15,16 @@ public class PracticaSpringBootApplication implements CommandLineRunner {
 
 	private static Logger LOG = LoggerFactory.getLogger(PracticaSpringBootApplication.class);
 
-	//Automaticamente el framework busca una instancia de esto
+	// Automaticamente el framework busca una instancia de esto
 	@Autowired
 	private IPersonaService service;
-	
+
 	public static void main(String[] args) {
 		SpringApplication.run(PracticaSpringBootApplication.class, args);
 	}
-	
+
 	@Override
-	public void run(String... args) throws Exception{
+	public void run(String... args) throws Exception {
 //		LOG.info("Hola papu");
 //		LOG.warn("Alerta");
 		service.registrar("Turing");
